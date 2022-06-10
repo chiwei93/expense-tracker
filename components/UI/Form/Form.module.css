@@ -1,0 +1,6 @@
+.form {
+  background-color: var(--color-form-bg);
+  width: min(85vw, 30rem);
+  padding: 2em;
+  border-radius: var(--border-radius-form);
+}
