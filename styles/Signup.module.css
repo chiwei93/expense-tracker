@@ -24,8 +24,12 @@
   gap: 1em;
 }
 
-.iconBtn {
+.iconBtn,
+.btnContainer {
   display: flex;
+}
+
+.iconBtn {
   align-items: center;
   justify-content: center;
 }
@@ -35,7 +39,6 @@
 }
 
 .btnContainer {
-  display: flex;
   flex-direction: column;
   margin-bottom: 4em;
 }

@@ -19,23 +19,29 @@
   margin-bottom: 1em;
 }
 
-.iconBtn {
+.iconBtn,
+.row,
+.btnContainer {
   display: flex;
+}
+
+.iconBtn,
+.row {
   align-items: center;
+}
+
+.iconBtn {
   justify-content: center;
 }
 
 .row {
-  display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   gap: 1em;
   margin-bottom: 3.5em;
 }
 
 .btnContainer {
-  display: flex;
   flex-direction: column;
   margin-bottom: 4em;
 }
