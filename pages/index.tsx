@@ -3,8 +3,11 @@ import { useState, useId } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 import FullSizeContainer from "../components/Containers/FullSizeContainer/FullSizeContainer";
+import FilledButton from "../components/UI/Buttons/FilledButton/FilledButton";
 import Form from "../components/UI/Form/Form";
+import Checkbox from "../components/UI/Inputs/Checkbox/Checkbox";
 import TextInput from "../components/UI/Inputs/TextInput/TextInput";
+import FormLink from "../components/UI/Links/FormLink/FormLink";
 
 import styles from "../styles/Home.module.css";
 
@@ -15,46 +18,65 @@ const Home: NextPage = () => {
 
   const [showPassword, setShowPassword] = useState(false);
 
+  const onFormSubmit = () => {};
+
   return (
     <FullSizeContainer>
-      <Form>
-        <p className={styles.logo}>ExpTrack</p>
+      <div className={styles.formContainer}>
+        <Form handleOnSubmit={onFormSubmit}>
+          <p className={styles.logo}>ExpTrack</p>
 
-        <p className={styles.heading}>Welcome back</p>
+          <p className={styles.heading}>Welcome back</p>
 
-        <div className={styles.formControl}>
-          <TextInput
-            labelText="Email"
-            inputType="email"
-            errorText="Please provide a valid email"
-            hasError={false}
-            id={`email-${emailInputId}`}
-          />
-        </div>
+          <div className={styles.formControl}>
+            <TextInput
+              labelText="Email"
+              inputType="email"
+              errorText="Please provide a valid email"
+              hasError={false}
+              id={`email-${emailInputId}`}
+            />
+          </div>
 
-        <div className={styles.formControl}>
-          <TextInput
-            labelText="Password"
-            inputType="password"
-            errorText="Please provide a valid password"
-            hasError={false}
-            hasIcon={true}
-            id={`password-${passwordInputId}`}
-          >
-            <button
-              onClick={() =>
-                setShowPassword((prevShowPassword) => !prevShowPassword)
-              }
-              type="button"
-              className={styles.iconBtn}
+          <div className={styles.formControl}>
+            <TextInput
+              labelText="Password"
+              inputType="password"
+              errorText="Please provide a valid password"
+              hasError={false}
+              hasIcon={true}
+              id={`password-${passwordInputId}`}
             >
-              {showPassword ? <FaEyeSlash /> : <FaEye />}
-            </button>
-          </TextInput>
-        </div>
+              <button
+                onClick={() =>
+                  setShowPassword((prevShowPassword) => !prevShowPassword)
+                }
+                type="button"
+                className={styles.iconBtn}
+              >
+                {showPassword ? <FaEye /> : <FaEyeSlash />}
+              </button>
+            </TextInput>
+          </div>
 
-        <div className={styles.row}>checkbox row</div>
-      </Form>
+          <div className={styles.row}>
+            <Checkbox id={`rememberMe-${rememberMeId}`}>Remember me</Checkbox>
+
+            <FormLink href="/forgot-password">Forgot your password?</FormLink>
+          </div>
+
+          <div className={styles.btnContainer}>
+            <FilledButton>Login</FilledButton>
+          </div>
+
+          <p className={styles.lastRow}>
+            Don&apos;t have an account yet?{" "}
+            <span>
+              <FormLink href="/signup">Sign Up</FormLink>
+            </span>
+          </p>
+        </Form>
+      </div>
     </FullSizeContainer>
   );
 };

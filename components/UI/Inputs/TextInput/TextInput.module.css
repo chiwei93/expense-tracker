@@ -10,6 +10,7 @@
   padding: 0.5em 0.8em;
   border-radius: var(--border-radius-input);
   outline: none;
+  width: 100%;
 }
 
 .input[type="password"] {
@@ -35,7 +36,7 @@
   left: 0.5em;
   font-size: var(--font-size-h6);
   font-weight: var(--font-weight-medium);
-  transition: transform 0.3s, font-size 0.2s;
+  transition: transform 0.3s, font-size 0.3s;
   padding: 0 0.3em;
 }
 
@@ -65,4 +66,12 @@
   color: var(--color-error-text);
   margin-top: 0.3em;
   font-size: 0.9em;
+}
+
+@media only screen and (min-width: 500px) {
+  .input:focus + .label,
+  .input:valid + .label,
+  .input:not(:placeholder-shown) + .label {
+    transform: translateY(-150%);
+  }
 }

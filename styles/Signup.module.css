@@ -19,6 +19,11 @@
   margin-bottom: 1em;
 }
 
+.formControl.columns2 {
+  display: grid;
+  gap: 1em;
+}
+
 .iconBtn {
   display: flex;
   align-items: center;
@@ -26,11 +31,6 @@
 }
 
 .row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1em;
   margin-bottom: 3.5em;
 }
 
@@ -42,4 +42,12 @@
 
 .lastRow {
   font-size: var(--font-size-small-text);
+}
+
+@media only screen and (min-width: 600px) {
+  .formControl.columns2 {
+    gap: 0.5em;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
 }

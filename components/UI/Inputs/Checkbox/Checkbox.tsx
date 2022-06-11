@@ -2,17 +2,25 @@ import styles from "./Checkbox.module.css";
 
 interface Props {
   id: string;
-  labelText: string;
   style?: React.CSSProperties;
+  children: React.ReactNode;
 }
 
 const Checkbox = (props: Props) => {
-  const { style = {} } = props;
+  const { id, style = {}, children } = props;
 
   return (
-    <div>
-      <input type="checkbox" style={style} />
-      <label htmlFor="">checkbox label</label>
+    <div className={styles.container}>
+      <input
+        type="checkbox"
+        style={style}
+        id={id}
+        name={id}
+        className={styles.input}
+      />
+      <label htmlFor={id} className={styles.label}>
+        {children}
+      </label>
     </div>
   );
 };
