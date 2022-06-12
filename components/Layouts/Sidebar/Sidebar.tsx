@@ -54,7 +54,7 @@ const Sidebar = () => {
         </li>
 
         <li className={cls(styles.iconBtnItem, styles.mobileBtnItem)}>
-          <Link href="add-transaction">
+          <Link href="/add-transaction">
             <a className={styles.plusBtn}>
               <BsPlusLg />
             </a>

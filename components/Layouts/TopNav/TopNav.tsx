@@ -1,3 +1,5 @@
+import { BiUserCircle, BiSun, BiMoon } from "react-icons/bi";
+
 import styles from "./TopNav.module.css";
 
 const TopNav = () => {
