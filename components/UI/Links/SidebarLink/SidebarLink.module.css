@@ -1,0 +1,32 @@
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-icon);
+  color: var(--color-sidebar-icon);
+  transition: color 0.2s;
+}
+
+.link:hover,
+.link:active,
+.link.active {
+  color: var(--color-primary);
+}
+
+@media only screen and (min-width: 744px) {
+  .link:hover,
+  .link:active,
+  .link.active {
+    color: var(--color-form-bg);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .link {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.3em 0.75em;
+    padding-right: 1.5em;
+    gap: 1em;
+  }
+}

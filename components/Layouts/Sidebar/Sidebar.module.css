@@ -1,0 +1,107 @@
+.nav {
+  background-color: var(--color-form-bg);
+  padding: 1em 1.5em;
+  position: fixed;
+  left: 5vw;
+  width: 90vw;
+  bottom: 5vh;
+  border-radius: var(--border-radius-form);
+  z-index: 5;
+}
+
+.iconBtnList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1em;
+  justify-items: center;
+}
+
+.iconBtnItem.tabletBtnItem,
+.iconBtnLabel {
+  display: none;
+}
+
+.plusBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-plus-icon);
+  background-color: var(--color-primary);
+  color: var(--color-form-bg);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, 50%);
+  width: min(20vw, 6rem);
+  height: min(20vw, 6rem);
+}
+
+@media only screen and (min-width: 744px) {
+  .nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: max-content;
+    border-radius: 0;
+    padding: 2em 0;
+    max-height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: var(--color-primary);
+  }
+
+  .nav::-webkit-scrollbar,
+  .iconBtnItem.mobileBtnItem {
+    display: none;
+  }
+
+  .iconBtnList {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    position: relative;
+    gap: 3em;
+  }
+
+  .iconBtnItem,
+  .iconBtnItem.tabletBtnItem,
+  .iconBtnItem.tabletBtnItem.logoRow {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .iconBtnItem.tabletBtnItem.logoRow {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .logo {
+    font-size: var(--font-size-small-text);
+    color: var(--color-form-bg);
+    font-weight: var(--font-weight-bold);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .iconBtnList {
+    gap: 2.5em;
+  }
+
+  .iconBtnItem,
+  .iconBtnItem.tabletBtnItem,
+  .iconBtnItem.tabletBtnItem.logoRow {
+    justify-content: stretch;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .iconBtnLabel {
+    display: inline-block;
+    font-size: 0.4em;
+    font-weight: var(--font-weight-medium);
+  }
+}

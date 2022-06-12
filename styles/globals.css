@@ -11,6 +11,7 @@
   --color-heading: #000;
   --color-error-text: #dd4a4a;
   --color-filled-btn-text: #fff;
+  --color-sidebar-icon: #bcbcc3;
   --border-radius-form: 0.5em;
   --border-radius-input: 0.25em;
   --border-radius-button: 0.25em;
@@ -22,6 +23,8 @@
   --font-size-h6: 1rem;
   --font-size-p: 0.83rem;
   --font-size-small-text: 0.69rem;
+  --font-size-icon: 1.8rem;
+  --font-size-plus-icon: 1.6rem;
   --font-weight-black: 900;
   --font-weight-extrabold: 800;
   --font-weight-bold: 700;
@@ -98,5 +101,12 @@ h6 {
     --font-size-h6: 1.2rem;
     --font-size-p: 1rem;
     --font-size-small-text: 0.83rem;
+    --font-size-icon: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  :root {
+    --font-size-small-text: 1rem;
   }
 }
