@@ -6,7 +6,7 @@
   width: 90vw;
   bottom: 5vh;
   border-radius: var(--border-radius-form);
-  z-index: 5;
+  z-index: var(--z-index-nav);
 }
 
 .iconBtnList {

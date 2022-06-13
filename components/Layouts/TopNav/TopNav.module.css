@@ -1,3 +1,45 @@
 .nav {
-  
+  background-color: var(--color-page-bg);
+  padding: 1.5em;
+  position: fixed;
+  top: 0;
+  max-width: 100vw;
+  z-index: var(--z-index-nav);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1em;
+}
+
+.logoContainer {
+  margin-bottom: 0.8em;
+}
+
+.logo {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-small-text);
+  color: var(--color-primary);
+}
+
+.selectContainer {
+  font-size: var(--font-size-h6);
+}
+
+.navBtnsContainer {
+  display: flex;
+  align-items: center;
+}
+
+.toggleBtnContainer {
+  margin-right: 1.5em;
+}
+
+@media only screen and (min-width: 744px) {
+  .nav {
+    padding: 1.7em 2em;
+  }
+
+  .logoContainer {
+    display: none;
+  }
 }

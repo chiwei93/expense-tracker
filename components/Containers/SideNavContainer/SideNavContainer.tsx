@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Sidebar from "../../Layouts/Sidebar/Sidebar";
 import TopNav from "../../Layouts/TopNav/TopNav";
 
@@ -10,10 +11,12 @@ interface Props {
 const SideNavContainer = (props: Props) => {
   const { children } = props;
 
+  const [sidebarWidth, setSidebarWidth] = useState(0);
+
   return (
     <div className={styles.container}>
-      <TopNav />
-      <Sidebar />
+      <TopNav sidebarWidth={sidebarWidth} />
+      <Sidebar handleSidebarWidthChange={setSidebarWidth} />
       <main className={styles.mainContent}>{children}</main>
     </div>
   );

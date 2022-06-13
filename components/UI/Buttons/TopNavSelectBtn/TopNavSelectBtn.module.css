@@ -1,0 +1,58 @@
+.container {
+  display: inline-block;
+  position: relative;
+  font-size: inherit;
+}
+
+.selectBtn {
+  display: flex;
+  align-items: center;
+  font-weight: var(--font-weight-bold);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5em;
+}
+
+.optionsContainer {
+  position: absolute;
+  top: 150%;
+  left: 0;
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--border-radius-input);
+  overflow: hidden;
+}
+
+.optionsList {
+  max-height: 15rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.optionsList::-webkit-scrollbar {
+  display: none;
+}
+
+.option {
+  font-size: 0.9em;
+  padding: 0.5em 1.5em;
+  background-color: var(--color-form-bg);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.2s;
+}
+
+.option:hover,
+.option:active {
+  background-color: var(--color-primary);
+  color: var(--color-form-bg);
+}
+
+@media only screen and (min-width: 500px) {
+  .option {
+    font-size: 0.75em;
+  }
+}

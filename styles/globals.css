@@ -34,6 +34,7 @@
   --font-weight-light: 300;
   --font-weight-extralight: 200;
   --font-weight-thin: 100;
+  --z-index-nav: 5;
 }
 
 html,

@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import Link from "next/link";
 import { MdDashboard, MdOutlineInsertChartOutlined } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -6,12 +7,49 @@ import { BsPlusLg } from "react-icons/bs";
 import { FaBoxes } from "react-icons/fa";
 import cls from "classnames";
 
-import styles from "./Sidebar.module.css";
 import SidebarLink from "../../UI/Links/SidebarLink/SidebarLink";
 
-const Sidebar = () => {
+import useIsomorphicLayoutEffect from "../../../hooks/useIsomorphicLayoutEffect";
+
+import styles from "./Sidebar.module.css";
+
+interface Props {
+  handleSidebarWidthChange: (width: number) => void;
+}
+
+const Sidebar = (props: Props) => {
+  const { handleSidebarWidthChange } = props;
+
+  const sidebarNavRef = useRef<HTMLElement | null>(null);
+
+  useIsomorphicLayoutEffect(() => {
+    const tabletBreakpoint = 744;
+
+    const handleWidthChange = () => {
+      if (sidebarNavRef.current) {
+        if (window.innerWidth >= tabletBreakpoint) {
+          handleSidebarWidthChange(sidebarNavRef.current?.offsetWidth);
+        } else {
+          handleSidebarWidthChange(0);
+        }
+      }
+    };
+
+    window.addEventListener("resize", handleWidthChange);
+    window.addEventListener("load", handleWidthChange);
+
+    return () => {
+      window.removeEventListener("resize", handleWidthChange);
+      window.removeEventListener("load", handleWidthChange);
+    };
+  }, [handleSidebarWidthChange]);
+
   return (
-    <nav aria-label="secondary navigation" className={styles.nav}>
+    <nav
+      aria-label="secondary navigation"
+      className={styles.nav}
+      ref={sidebarNavRef}
+    >
       <ul className={styles.iconBtnList}>
         <li
           className={cls(
