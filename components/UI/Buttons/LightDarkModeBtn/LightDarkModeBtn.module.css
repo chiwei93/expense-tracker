@@ -18,3 +18,55 @@
   transform: translateY(-50%);
   transition: transform 0.4s;
 }
+
+.btn.light::before {
+  transform: translate(0, -50%);
+}
+
+.btn.dark::before {
+  transform: translate(100%, -50%);
+}
+
+.sunIcon,
+.moonIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--color-primary);
+  font-size: 1.3rem;
+  transition: opacity 0.2s;
+}
+
+.sunIcon {
+  right: 5%;
+}
+
+.moonIcon {
+  left: 5%;
+}
+
+.btn.dark .sunIcon,
+.btn.light .moonIcon {
+  opacity: 0;
+}
+
+@media only screen and (min-width: 500px) {
+  .btn {
+    width: 3.8rem;
+    height: 1.9rem;
+  }
+
+  .btn::before {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
+  .btn.dark::before {
+    transform: translate(120%, -50%);
+  }
+
+  .sunIcon,
+  .moonIcon {
+    font-size: 1.5rem;
+  }
+}

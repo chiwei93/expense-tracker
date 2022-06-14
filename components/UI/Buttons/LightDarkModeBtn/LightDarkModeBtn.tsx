@@ -11,13 +11,25 @@ const LightDarkModeBtn = (props: Props) => {
 
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const setLightAndDarkClass = () => {};
+  const setLightAndDarkClass = () => {
+    return isDarkMode ? styles.dark : styles.light;
+  };
+
+  const renderIcon = () => {
+    return isDarkMode ? (
+      <BiMoon className={styles.moonIcon} />
+    ) : (
+      <BiSun className={styles.sunIcon} />
+    );
+  };
 
   return (
     <button
-      className={cls(styles.btn)}
+      className={cls(styles.btn, setLightAndDarkClass())}
       onClick={() => setIsDarkMode((prevIsDarkMode) => !prevIsDarkMode)}
-    ></button>
+    >
+      {renderIcon()}
+    </button>
   );
 };
 

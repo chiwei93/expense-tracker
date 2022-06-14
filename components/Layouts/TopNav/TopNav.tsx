@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { BiUserCircle, BiSun, BiMoon } from "react-icons/bi";
-import LightDarkModeBtn from "../../UI/Buttons/LightDarkModeBtn/LightDarkModeBtn";
 
+import LightDarkModeBtn from "../../UI/Buttons/LightDarkModeBtn/LightDarkModeBtn";
 import TopNavSelectBtn from "../../UI/Buttons/TopNavSelectBtn/TopNavSelectBtn";
+import UserProfileBtn from "../../UI/Buttons/UserProfileBtn/UserProfileBtn";
 
 import styles from "./TopNav.module.css";
 
@@ -19,23 +19,24 @@ const TopNav = (props: Props) => {
       className={styles.nav}
       style={{ left: sidebarWidth, width: `calc(100vw - ${sidebarWidth}px)` }}
     >
-      <div className={styles.projectOptionsContainer}>
-        <div className={styles.logoContainer}>
-          <Link href="/dashboard">
-            <a className={styles.logo}>ExpTrack</a>
-          </Link>
-        </div>
+      <div className={styles.logoContainer}>
+        <Link href="/dashboard">
+          <a className={styles.logo}>ExpTrack</a>
+        </Link>
+      </div>
 
+      <div className={styles.projectOptionsContainer}>
         <div className={styles.selectContainer}>
           <TopNavSelectBtn />
         </div>
-      </div>
 
-      <div className={styles.navBtnsContainer}>
-        <div className={styles.toggleBtnContainer}>
-          <LightDarkModeBtn />
+        <div className={styles.navBtnsContainer}>
+          <div className={styles.toggleBtnContainer}>
+            <LightDarkModeBtn />
+          </div>
+
+          <UserProfileBtn />
         </div>
-        <div>user</div>
       </div>
     </nav>
   );
