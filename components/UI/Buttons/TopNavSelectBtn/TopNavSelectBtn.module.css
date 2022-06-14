@@ -8,6 +8,8 @@
   display: flex;
   align-items: center;
   font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
+  font-size: inherit;
 }
 
 .icon {
