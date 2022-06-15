@@ -4,7 +4,7 @@
   position: fixed;
   left: 5vw;
   width: 90vw;
-  bottom: 5vh;
+  bottom: 2vh;
   border-radius: var(--border-radius-form);
   z-index: var(--z-index-nav);
 }

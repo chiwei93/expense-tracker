@@ -20,8 +20,6 @@ const TopNav = (props: Props) => {
   const navbarRef = useRef<HTMLElement | null>(null);
 
   useIsomorphicLayoutEffect(() => {
-    const tabletBreakpoint = 744;
-
     const handleHeightChange = () => {
       if (navbarRef.current) {
         handleNavbarHeightChange(navbarRef.current.offsetHeight);

@@ -1,0 +1,36 @@
+.container {
+  background-color: var(--color-section-bg);
+  padding: 1em;
+  border-radius: var(--border-radius-form);
+  display: grid;
+  grid-template-columns: 0.2fr 0.5fr 0.3fr;
+  gap: 1em;
+}
+
+.iconContainer {
+  
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.title {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+}
+
+.date {
+  font-size: var(--font-size-small-text);
+  font-weight: var(--font-weight-medium);
+}
+
+.priceContainer {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  justify-self: end;
+  align-self: center;
+}

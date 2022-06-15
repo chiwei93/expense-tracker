@@ -4,13 +4,14 @@ import styles from "./BreadCrumb.module.css";
 
 interface Props {
   children: React.ReactNode;
+  href: string;
 }
 
 const BreadCrumb = (props: Props) => {
-  const { children } = props;
+  const { children, href } = props;
 
   return (
-    <Link href="">
+    <Link href={href}>
       <a className={styles.link}>{children}</a>
     </Link>
   );

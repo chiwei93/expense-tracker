@@ -1,0 +1,99 @@
+.welcomeBackText {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.userName {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+.expensesHeading,
+.recentTransactionsHeading {
+  font-size: var(--font-size-h5);
+  margin-bottom: 2em;
+}
+
+.expensesChartContainer,
+.statsItem {
+  background-color: var(--color-section-bg);
+  border-radius: var(--border-radius-form);
+}
+
+.expensesChartContainer,
+.statsList {
+  margin-bottom: 3em;
+}
+
+.statsItem {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.statsItem:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.stat {
+  font-size: var(--font-size-h4);
+  font-weight: var(--font-weight-semibold);
+}
+
+.stat.red {
+  color: var(--color-error-text);
+}
+
+.stat.green {
+  color: var(--color-dark-green);
+}
+
+.stat.primary {
+  color: var(--color-primary);
+}
+
+.statLabel {
+  font-weight: var(--font-weight-medium);
+}
+
+.recentTransactionsHeading {
+  margin-top: 3em;
+}
+
+.transactionsList {
+  margin-bottom: 4em;
+}
+
+.transactionItem:not(:last-child) {
+  margin-bottom: 0.5em;
+}
+
+@media only screen and (min-width: 744px) {
+  .expensesHeading,
+  .recentTransactionsHeading {
+    font-size: var(--font-size-h4);
+  }
+
+  .statsList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .statsItem:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .stat {
+    font-size: var(--font-size-h5);
+  }
+
+  .statLabel {
+    font-size: var(--font-size-small-text);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+}

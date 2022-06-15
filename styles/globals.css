@@ -12,6 +12,8 @@
   --color-error-text: #dd4a4a;
   --color-filled-btn-text: #fff;
   --color-sidebar-icon: #bcbcc3;
+  --color-section-bg: #e9ebef;
+  --color-dark-green: #0AA262;
   --border-radius-form: 0.5em;
   --border-radius-input: 0.25em;
   --border-radius-button: 0.25em;
@@ -35,6 +37,7 @@
   --font-weight-extralight: 200;
   --font-weight-thin: 100;
   --z-index-nav: 5;
+  --breadcrumbs-gap: 0.6em;
 }
 
 html,
@@ -84,6 +87,7 @@ h4,
 h5,
 h6 {
   color: var(--color-heading);
+  font-weight: var(--font-weight-semibold);
 }
 
 #__next {
