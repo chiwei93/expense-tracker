@@ -3,6 +3,8 @@ import { useState } from "react";
 import Sidebar from "../../Layouts/Sidebar/Sidebar";
 import TopNav from "../../Layouts/TopNav/TopNav";
 
+import useIsomorphicLayoutEffect from "../../../hooks/useIsomorphicLayoutEffect";
+
 import styles from "./SideNavContainer.module.css";
 
 interface Props {
@@ -12,39 +14,29 @@ interface Props {
 const SideNavContainer = (props: Props) => {
   const { children } = props;
 
-  const desktopBreakpoint = 1440;
-  const tabletBreakpoint = 744;
-
   const [sidebarWidth, setSidebarWidth] = useState(0);
   const [topNavHeight, setTopNavHeight] = useState(0);
+  const [paddingLeft, setPaddingLeft] = useState(2);
 
-  const calculatedMainPaddingTop = () => {
-    let extraPadding = 1.5;
+  useIsomorphicLayoutEffect(() => {
+    const handlePaddingLeft = () => {
+      const desktopBreakpoint = 1440;
 
-    if (typeof window !== "undefined") {
       if (window.innerWidth >= desktopBreakpoint) {
-        extraPadding = 1.5;
-      } else if (window.innerWidth >= tabletBreakpoint) {
-        extraPadding = 1.5;
+        setPaddingLeft(5);
+      } else {
+        setPaddingLeft(2);
       }
-    }
+    };
 
-    return `calc(${topNavHeight}px + ${extraPadding}em)`;
-  };
+    window.addEventListener("resize", handlePaddingLeft);
+    window.addEventListener("load", handlePaddingLeft);
 
-  const calculatedMainPaddingLeft = () => {
-    let extraPadding = 2;
-
-    if (typeof window !== "undefined") {
-      if (window.innerWidth >= desktopBreakpoint) {
-        extraPadding = 2;
-      } else if (window.innerWidth >= tabletBreakpoint) {
-        extraPadding = 2;
-      }
-    }
-
-    return `calc(${sidebarWidth}px + ${extraPadding}em)`;
-  };
+    return () => {
+      window.removeEventListener("resize", handlePaddingLeft);
+      window.removeEventListener("load", handlePaddingLeft);
+    };
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -57,8 +49,8 @@ const SideNavContainer = (props: Props) => {
       <main
         className={styles.mainContent}
         style={{
-          paddingLeft: calculatedMainPaddingLeft(),
-          paddingTop: calculatedMainPaddingTop(),
+          paddingLeft: `calc(${sidebarWidth}px + ${paddingLeft}em)`,
+          paddingTop: `calc(${topNavHeight}px + 1.5em)`,
         }}
       >
         {children}

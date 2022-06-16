@@ -17,3 +17,9 @@
     padding-right: 2em;
   }
 }
+
+@media only screen and (min-width: 1440px) {
+  .mainContent {
+    padding-right: 5em;
+  }
+}
