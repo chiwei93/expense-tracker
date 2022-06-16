@@ -9,9 +9,10 @@
 }
 
 .expensesHeading,
-.recentTransactionsHeading {
+.recentTransactionsHeading,
+.summaryHeading {
   font-size: var(--font-size-h5);
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 .expensesChartContainer,
@@ -62,7 +63,8 @@
   margin-top: 3em;
 }
 
-.transactionsList {
+.transactionsList,
+.summaryList {
   margin-bottom: 4em;
 }
 
@@ -70,9 +72,47 @@
   margin-bottom: 0.5em;
 }
 
+.summaryList {
+  background-color: var(--color-section-bg);
+  border-radius: var(--border-radius-form);
+  padding: 1em 1.5em;
+  margin-bottom: 8em;
+}
+
+.summaryTitle {
+  margin-bottom: 1.5em;
+  font-weight: var(--font-weight-medium);
+}
+
+.summaryItem {
+  display: grid;
+  grid-template-columns: 0.8fr 0.2fr;
+  gap: 1em;
+  align-items: start;
+}
+
+.summaryItem:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.category,
+.categorySpending {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-h6);
+}
+
+.category {
+  color: var(--color-heading);
+}
+
+.categorySpending {
+  justify-self: end;
+}
+
 @media only screen and (min-width: 744px) {
   .expensesHeading,
-  .recentTransactionsHeading {
+  .recentTransactionsHeading,
+  .summaryHeading {
     font-size: var(--font-size-h4);
   }
 
@@ -93,7 +133,28 @@
   .statLabel {
     font-size: var(--font-size-small-text);
   }
+
+  .summaryList {
+    padding: 2.5em;
+    margin-bottom: 4em;
+  }
 }
 
 @media only screen and (min-width: 1440px) {
+  .sectionDividerContainer {
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    gap: 2em;
+  }
+
+  .summaryItem {
+    display: grid;
+    grid-template-columns: 0.65fr 0.35fr;
+    gap: 1em;
+    align-items: start;
+  }
+
+  .summaryList {
+    margin-bottom: 0;
+  }
 }

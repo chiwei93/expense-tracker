@@ -1,0 +1,73 @@
+.icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.icon.food {
+  background-color: var(--color-icon-light-orange);
+  color: var(--color-icon-dark-orange);
+}
+
+.icon.household {
+  background-color: var(--color-icon-light-blue-202);
+  color: var(--color-icon-dark-blue-202);
+}
+
+.icon.entertainment {
+  background-color: var(--color-icon-light-purple);
+  color: var(--color-icon-dark-purple);
+}
+
+.icon.clothes {
+  background-color: var(--color-icon-light-pink);
+  color: var(--color-icon-dark-pink);
+}
+
+.icon.grocery {
+  background-color: var(--color-icon-light-green);
+  color: var(--color-icon-dark-green);
+}
+
+.icon.appliances {
+  background-color: var(--color-icon-light-blue);
+  color: var(--color-icon-dark-blue);
+}
+
+.icon.utilities {
+  background-color: var(--color-icon-light-yellow);
+  color: var(--color-icon-dark-yellow);
+}
+
+.icon.health {
+  background-color: var(--color-icon-light-pink-338);
+  color: var(--color-icon-dark-pink-338);
+}
+
+.icon.education {
+  background-color: var(--color-icon-light-cyan);
+  color: var(--color-icon-dark-cyan);
+}
+
+.icon.transportation {
+  background-color: var(--color-icon-light-purple-274);
+  color: var(--color-icon-dark-purple-274);
+}
+
+.icon.others,
+.icon.default {
+  background-color: var(--color-icon-light-gold);
+  color: var(--color-icon-dark-gold);
+}
+
+@media only screen and (min-width: 500px) {
+  .icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.6rem;
+  }
+}

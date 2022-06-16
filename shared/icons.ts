@@ -1,0 +1,11 @@
+export const FOOD_ICON = "food";
+export const HOUSEHOLD_ICON = "household good";
+export const ENTERTAINMENT_ICON = "entertainment";
+export const CLOTHES_ICON = "clothes";
+export const GROCERY_ICON = "grocery";
+export const APPLIANCES_ICON = "appliances";
+export const UTILITIES_ICON = "utilities";
+export const HEALTH_ICON = "health";
+export const EDUCATION_ICON = "education";
+export const TRANSPORTATION_ICON = "transportation";
+export const OTHERS_ICON = "others";

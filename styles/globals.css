@@ -13,7 +13,29 @@
   --color-filled-btn-text: #fff;
   --color-sidebar-icon: #bcbcc3;
   --color-section-bg: #e9ebef;
-  --color-dark-green: #0AA262;
+  --color-dark-green: #0aa262;
+  --color-icon-light-green: #cffce9;
+  --color-icon-dark-green: #0aa262;
+  --color-icon-light-blue: #cde6fe;
+  --color-icon-dark-blue: #034079;
+  --color-icon-light-orange: #ffd0be;
+  --color-icon-dark-orange: #fe7138;
+  --color-icon-light-yellow: #faf3b5;
+  --color-icon-dark-yellow: #d4bf07;
+  --color-icon-light-purple: #cac1fd;
+  --color-icon-dark-purple: #2407d4;
+  --color-icon-light-pink: #f4c3fc;
+  --color-icon-dark-pink: #b707d4;
+  --color-icon-light-blue-202: #bfe5fb;
+  --color-icon-dark-blue-202: #078ad4;
+  --color-icon-light-cyan: #bafcf4;
+  --color-icon-dark-cyan: #07d4bb;
+  --color-icon-light-gold: #ede1a6;
+  --color-icon-dark-gold: #83721b;
+  --color-icon-light-purple-274: #d8c7e6;
+  --color-icon-dark-purple-274: #6a3f8b;
+  --color-icon-light-pink-338: #efb3c9;
+  --color-icon-dark-pink-338: #b12658;
   --border-radius-form: 0.5em;
   --border-radius-input: 0.25em;
   --border-radius-button: 0.25em;
@@ -88,6 +110,7 @@ h5,
 h6 {
   color: var(--color-heading);
   font-weight: var(--font-weight-semibold);
+  text-transform: capitalize;
 }
 
 #__next {

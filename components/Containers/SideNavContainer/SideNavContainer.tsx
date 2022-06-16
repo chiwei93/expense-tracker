@@ -33,7 +33,7 @@ const SideNavContainer = (props: Props) => {
   };
 
   const calculatedMainPaddingLeft = () => {
-    let extraPadding = 1.5;
+    let extraPadding = 2;
 
     if (typeof window !== "undefined") {
       if (window.innerWidth >= desktopBreakpoint) {

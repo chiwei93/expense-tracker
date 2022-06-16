@@ -5,10 +5,7 @@
   display: grid;
   grid-template-columns: 0.2fr 0.5fr 0.3fr;
   gap: 1em;
-}
-
-.iconContainer {
-  
+  align-items: center;
 }
 
 .detailsContainer {
@@ -33,4 +30,10 @@
   color: var(--color-heading);
   justify-self: end;
   align-self: center;
+}
+
+@media only screen and (min-width: 550px) {
+  .container {
+    padding: 1em 2em;
+  }
 }
