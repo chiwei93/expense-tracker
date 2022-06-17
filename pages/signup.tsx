@@ -68,7 +68,7 @@ const Signup: NextPage = () => {
         <div className={styles.formControl}>
           <TextInput
             labelText="Password"
-            inputType="password"
+            inputType={showPassword ? "text" : "password"}
             errorText="Please provide a valid password"
             hasError={false}
             hasIcon={true}
@@ -89,7 +89,7 @@ const Signup: NextPage = () => {
         <div className={styles.formControl}>
           <TextInput
             labelText="Confirm Password"
-            inputType="password"
+            inputType={showConfirmPassword ? "text" : "password"}
             errorText="Passwords provided don't match"
             hasError={false}
             hasIcon={true}

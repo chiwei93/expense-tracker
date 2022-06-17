@@ -27,7 +27,7 @@ const Home: NextPage = () => {
   const onFormSubmit = () => {
     // validate user input
     dispatch(login());
-    router.replace('/dashboard');
+    router.replace("/dashboard");
   };
 
   return (
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
         <div className={styles.formControl}>
           <TextInput
             labelText="Password"
-            inputType="password"
+            inputType={showPassword ? "text" : "password"}
             errorText="Please provide a valid password"
             hasError={false}
             hasIcon={true}
