@@ -11,6 +11,8 @@ import SidebarLink from "../../UI/Links/SidebarLink/SidebarLink";
 
 import useIsomorphicLayoutEffect from "../../../hooks/useIsomorphicLayoutEffect";
 
+import { TABLET_BREAKPOINT } from "../../../shared/constants";
+
 import styles from "./Sidebar.module.css";
 
 interface Props {
@@ -23,11 +25,9 @@ const Sidebar = (props: Props) => {
   const sidebarNavRef = useRef<HTMLElement | null>(null);
 
   useIsomorphicLayoutEffect(() => {
-    const tabletBreakpoint = 744;
-
     const handleWidthChange = () => {
       if (sidebarNavRef.current) {
-        if (window.innerWidth >= tabletBreakpoint) {
+        if (window.innerWidth >= TABLET_BREAKPOINT) {
           handleSidebarWidthChange(sidebarNavRef.current?.offsetWidth);
         } else {
           handleSidebarWidthChange(0);

@@ -1,21 +1,17 @@
 import type { NextPage } from "next";
 
-import { useRouter } from "next/router";
 import cls from "classnames";
 
-import SideNavContainer from "../components/Containers/SideNavContainer/SideNavContainer";
 import BreadCrumbsList from "../components/Layouts/BreadCrumbsList/BreadCrumbsList";
-
-import styles from "../styles/Dashboard.module.css";
 import DashboardTransactionItem from "../components/DashboardPage/DashboardTransactionItem/DashboardTransactionItem";
 
+import styles from "../styles/Dashboard.module.css";
+
 const Dashboard: NextPage = () => {
-  const router = useRouter();
-  const currentPathname = router.pathname;
-  const breadcrumbs = [{ name: "Dashboard", href: currentPathname }];
+  const breadcrumbs = [{ name: "Dashboard", href: '/dashboard' }];
 
   return (
-    <SideNavContainer>
+    <>
       <BreadCrumbsList breadcrumbs={breadcrumbs} />
 
       <p className={styles.welcomeBackText}>
@@ -81,7 +77,7 @@ const Dashboard: NextPage = () => {
           </ul>
         </div>
       </div>
-    </SideNavContainer>
+    </>
   );
 };
 
