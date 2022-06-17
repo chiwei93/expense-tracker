@@ -28,11 +28,9 @@ const TopNav = (props: Props) => {
 
     handleHeightChange();
     window.addEventListener("resize", handleHeightChange);
-    window.addEventListener("load", handleHeightChange);
 
     return () => {
       window.removeEventListener("resize", handleHeightChange);
-      window.removeEventListener("load", handleHeightChange);
       handleNavbarHeightChange(0);
     };
   }, [handleNavbarHeightChange]);

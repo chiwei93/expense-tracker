@@ -37,11 +37,9 @@ const Sidebar = (props: Props) => {
 
     handleWidthChange();
     window.addEventListener("resize", handleWidthChange);
-    window.addEventListener("load", handleWidthChange);
 
     return () => {
       window.removeEventListener("resize", handleWidthChange);
-      window.removeEventListener("load", handleWidthChange);
       handleSidebarWidthChange(0);
     };
   }, [handleSidebarWidthChange]);

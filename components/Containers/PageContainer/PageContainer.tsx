@@ -38,12 +38,11 @@ const PageContainer = (props: Props) => {
       }
     };
 
+    handlePaddingLeftChange();
     window.addEventListener("resize", handlePaddingLeftChange);
-    window.addEventListener("load", handlePaddingLeftChange);
 
     return () => {
       window.removeEventListener("resize", handlePaddingLeftChange);
-      window.removeEventListener("load", handlePaddingLeftChange);
     };
   }, []);
 
