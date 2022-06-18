@@ -1,9 +1,16 @@
 .btn {
   padding: 0.5em 1em;
-  background-color: var(--color-primary);
-  color: var(--color-filled-btn-text);
   border-radius: var(--border-radius-button);
   border: 1px solid var(--color-primary);
   text-align: center;
   font-size: var(--font-size-h6);
+}
+
+.btn.filled {
+  background-color: var(--color-primary);
+  color: var(--color-filled-btn-text);
+}
+
+.btn.outline {
+  color: var(--color-primary);
 }

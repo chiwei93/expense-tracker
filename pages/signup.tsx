@@ -9,7 +9,7 @@ import Form from "../components/UI/Form/Form";
 import TextInput from "../components/UI/Inputs/TextInput/TextInput";
 import Checkbox from "../components/UI/Inputs/Checkbox/Checkbox";
 import FormLink from "../components/UI/Links/FormLink/FormLink";
-import FilledButton from "../components/UI/Buttons/FilledButton/FilledButton";
+import FilledOutlineButton from "../components/UI/Buttons/FilledOutlineButton/FilledOutlineButton";
 
 import { useAppDispatch } from "../store";
 import { login } from "../store/reducers/authSlice";
@@ -120,7 +120,7 @@ const Signup: NextPage = () => {
         </div>
 
         <div className={styles.btnContainer}>
-          <FilledButton>Sign up</FilledButton>
+          <FilledOutlineButton>Sign up</FilledOutlineButton>
         </div>
 
         <p className={styles.lastRow}>

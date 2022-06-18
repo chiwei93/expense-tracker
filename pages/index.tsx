@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import { useState, useId } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 
-import FilledButton from "../components/UI/Buttons/FilledButton/FilledButton";
+import FilledOutlineButton from "../components/UI/Buttons/FilledOutlineButton/FilledOutlineButton";
 import Form from "../components/UI/Form/Form";
 import Checkbox from "../components/UI/Inputs/Checkbox/Checkbox";
 import TextInput from "../components/UI/Inputs/TextInput/TextInput";
@@ -75,7 +75,7 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.btnContainer}>
-          <FilledButton>Login</FilledButton>
+          <FilledOutlineButton>Login</FilledOutlineButton>
         </div>
 
         <p className={styles.lastRow}>
