@@ -1,0 +1,8 @@
+.heading {
+  font-size: var(--font-size-h4);
+  margin: 1.5em 0;
+}
+
+.formControl {
+  margin-bottom: 1em;
+}

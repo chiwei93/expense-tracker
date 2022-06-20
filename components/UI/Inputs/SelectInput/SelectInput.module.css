@@ -1,0 +1,98 @@
+.container,
+.selectInput,
+.icon,
+.optionsContainer,
+.option,
+.checkIcon {
+  display: flex;
+}
+
+.container,
+.selectInput,
+.optionsContainer {
+  position: relative;
+}
+
+.container,
+.optionsContainer {
+  flex-direction: column;
+}
+
+.selectInput,
+.option {
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  gap: 0.5em;
+  padding: 0.5em 0.8em;
+}
+
+.selectInput,
+.option,
+.optionsContainer {
+  width: 100%;
+}
+
+.selectInput,
+.optionsContainer {
+  border: 1px solid var(--color-input-border);
+}
+
+.selectInput,
+.option:hover {
+  background-color: var(--color-input-bg);
+}
+
+.selectInput {
+  border-radius: var(--border-radius-input);
+  transition: border-color 0.2s;
+}
+
+.selectInput.active {
+  border-color: var(--color-primary);
+}
+
+.selectText {
+  font-size: var(--font-size-h6);
+  font-weight: var(--font-weight-medium);
+}
+
+.icon,
+.checkIcon {
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  font-size: 1.4em;
+}
+
+.optionsContainer,
+.option {
+  border-radius: var(--border-radius-form);
+}
+
+.optionsContainer {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  background-color: var(--color-form-bg);
+  padding: 0.5em;
+}
+
+.option {
+  transition: background-color 0.3s;
+}
+
+.checkIcon {
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.option:hover .checkIcon {
+  opacity: 1;
+}
+
+.option:not(:last-of-type) {
+  margin-bottom: 0.5em;
+}
