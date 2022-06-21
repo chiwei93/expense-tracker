@@ -5,10 +5,11 @@ import styles from "./Form.module.css";
 interface Props {
   handleOnSubmit: () => void;
   children: ReactNode;
+  style?: React.CSSProperties;
 }
 
 const Form = (props: Props) => {
-  const { handleOnSubmit, children } = props;
+  const { handleOnSubmit, children, style = {} } = props;
 
   const onFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -16,7 +17,7 @@ const Form = (props: Props) => {
   };
 
   return (
-    <form className={styles.form} onSubmit={onFormSubmit}>
+    <form className={styles.form} onSubmit={onFormSubmit} style={style}>
       {children}
     </form>
   );

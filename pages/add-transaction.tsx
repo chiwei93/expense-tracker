@@ -25,15 +25,13 @@ const AddTransaction: NextPage = () => {
     { name: "income", value: "income" },
   ];
 
-  const categories = [
-    { name: "household", value: "household" }
-  ];
+  const categories = [{ name: "household", value: "household" }];
 
   const onFormSubmit = () => {};
 
   return (
     <FlexFullVerticalContainer>
-      <Form handleOnSubmit={onFormSubmit}>
+      <Form handleOnSubmit={onFormSubmit} style={{ margin: "4em 0" }}>
         <BreadCrumbsList breadcrumbs={breadcrumbs} />
 
         <h1 className={styles.heading}>Create new transaction</h1>
