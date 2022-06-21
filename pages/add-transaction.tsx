@@ -25,7 +25,9 @@ const AddTransaction: NextPage = () => {
     { name: "income", value: "income" },
   ];
 
-  const categories = [{ name: "household", value: "household" }];
+  const categories = [
+    { name: "household", value: "household" }
+  ];
 
   const onFormSubmit = () => {};
 

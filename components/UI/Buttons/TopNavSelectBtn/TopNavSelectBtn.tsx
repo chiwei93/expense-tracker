@@ -30,17 +30,6 @@ const TopNavSelectBtn = (props: Props) => {
             <li className={styles.option}>option 1</li>
             <li className={styles.option}>option 1</li>
             <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
-            <li className={styles.option}>option 1</li>
           </ul>
         </div>
       )}

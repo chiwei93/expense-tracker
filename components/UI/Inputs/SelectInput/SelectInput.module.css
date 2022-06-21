@@ -78,6 +78,14 @@
   left: 0;
   background-color: var(--color-form-bg);
   padding: 0.5em;
+  max-height: 15rem;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.optionsContainer::-webkit-scrollbar {
+  display: none;
 }
 
 .option {

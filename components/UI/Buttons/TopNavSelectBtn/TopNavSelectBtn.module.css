@@ -1,23 +1,33 @@
 .container {
   display: inline-block;
   position: relative;
+}
+
+.container,
+.icon {
   font-size: inherit;
 }
 
-.selectBtn {
+.selectBtn,
+.icon {
   display: flex;
   align-items: center;
+}
+
+.selectBtn {
   font-weight: var(--font-weight-bold);
   color: var(--color-heading);
   font-size: inherit;
 }
 
 .icon {
-  display: flex;
-  align-items: center;
   justify-content: center;
   margin-left: 0.5em;
-  font-size: inherit;
+}
+
+.optionsContainer,
+.option {
+  border-radius: var(--border-radius-form);
 }
 
 .optionsContainer {
@@ -25,8 +35,9 @@
   top: 150%;
   left: 0;
   font-weight: var(--font-weight-medium);
-  border-radius: var(--border-radius-input);
   overflow: hidden;
+  background-color: var(--color-form-bg);
+  padding: 0.5em;
 }
 
 .optionsList {
@@ -42,16 +53,13 @@
 
 .option {
   font-size: 0.9em;
-  padding: 0.5em 1.5em;
-  background-color: var(--color-form-bg);
+  padding: 0.5em 1em;
   cursor: pointer;
-  transition: background-color 0.3s, color 0.2s;
+  transition: background-color 0.3s;
 }
 
-.option:hover,
-.option:active {
-  background-color: var(--color-primary);
-  color: var(--color-form-bg);
+.option:hover {
+  background-color: var(--color-input-bg);
 }
 
 @media only screen and (min-width: 500px) {
