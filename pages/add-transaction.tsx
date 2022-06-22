@@ -6,10 +6,12 @@ import cls from "classnames";
 import FlexFullVerticalContainer from "../components/Containers/FlexFullVerticalContainer/FlexFullVerticalContainer";
 import BreadCrumbsList from "../components/Layouts/BreadCrumbsList/BreadCrumbsList";
 import Form from "../components/UI/Form/Form";
-
-import styles from "../styles/AddTransaction.module.css";
 import TextInput from "../components/UI/Inputs/TextInput/TextInput";
 import SelectInput from "../components/UI/Inputs/SelectInput/SelectInput";
+import DatePicker from "../components/UI/Inputs/DatePicker/DatePicker";
+import FilledOutlineButton from "../components/UI/Buttons/FilledOutlineButton/FilledOutlineButton";
+
+import styles from "../styles/AddTransaction.module.css";
 
 const AddTransaction: NextPage = () => {
   const titleInputId = useId();
@@ -49,6 +51,10 @@ const AddTransaction: NextPage = () => {
         </div>
 
         <div className={styles.formControl}>
+          <DatePicker labelText="Date" />
+        </div>
+
+        <div className={styles.formControl}>
           <TextInput
             labelText="amount"
             id={`amount-${amountInputId}`}
@@ -56,6 +62,11 @@ const AddTransaction: NextPage = () => {
           />
         </div>
 
+        <div className={styles.btnContainer}>
+          <FilledOutlineButton>
+            Create
+          </FilledOutlineButton>
+        </div>
       </Form>
     </FlexFullVerticalContainer>
   );

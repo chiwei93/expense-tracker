@@ -58,7 +58,9 @@
   --font-weight-light: 300;
   --font-weight-extralight: 200;
   --font-weight-thin: 100;
-  --z-index-nav: 5;
+  --z-index-nav: 10;
+  --z-index-select-options: 5;
+  --z-index-label: 3;
   --breadcrumbs-gap: 0.6em;
 }
 

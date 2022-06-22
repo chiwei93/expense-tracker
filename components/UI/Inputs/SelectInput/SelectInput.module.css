@@ -71,6 +71,7 @@
   top: 50%;
   transform: translateY(-50%);
   font-size: 1.1em;
+  z-index: var(--z-index-label);
   transition: transform 0.3s, font-size 0.3s, color 0.2s;
 }
 
@@ -104,7 +105,7 @@
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-  z-index: 2;
+  z-index: var(--z-index-select-options);
 }
 
 .optionsContainer::-webkit-scrollbar {

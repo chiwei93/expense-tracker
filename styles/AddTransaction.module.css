@@ -6,3 +6,9 @@
 .formControl {
   margin-bottom: 1.2em;
 }
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+}
