@@ -21,7 +21,7 @@ const AddTransaction: NextPage = () => {
   ];
 
   const transactionType = [
-    { name: "expense", value: "expenses" },
+    { name: "expense", value: "expense" },
     { name: "income", value: "income" },
   ];
 
@@ -41,6 +41,14 @@ const AddTransaction: NextPage = () => {
         </div>
 
         <div className={styles.formControl}>
+          <SelectInput options={transactionType} labelText="Type" />
+        </div>
+
+        <div className={styles.formControl}>
+          <SelectInput options={categories} labelText="Category" />
+        </div>
+
+        <div className={styles.formControl}>
           <TextInput
             labelText="amount"
             id={`amount-${amountInputId}`}
@@ -48,13 +56,6 @@ const AddTransaction: NextPage = () => {
           />
         </div>
 
-        <div className={styles.formControl}>
-          <SelectInput options={transactionType} displayText="Type" />
-        </div>
-
-        <div className={styles.formControl}>
-          <SelectInput options={categories} displayText="Category" />
-        </div>
       </Form>
     </FlexFullVerticalContainer>
   );

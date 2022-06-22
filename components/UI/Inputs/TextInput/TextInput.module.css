@@ -46,7 +46,7 @@
   left: 0.5em;
   font-size: var(--font-size-h6);
   font-weight: var(--font-weight-medium);
-  transition: transform 0.3s, font-size 0.3s;
+  transition: transform 0.3s, font-size 0.3s, color 0.2s;
   padding: 0 0.3em;
   text-transform: capitalize;
 }
@@ -60,6 +60,7 @@
     var(--color-form-bg),
     var(--color-input-bg)
   );
+  color: var(--color-primary);
   font-size: 0.9em;
 }
 

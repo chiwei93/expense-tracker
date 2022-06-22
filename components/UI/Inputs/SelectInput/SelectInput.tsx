@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useRef } from "react";
 import { FiChevronDown, FiChevronUp } from "react-icons/fi";
 import { GiCheckMark } from "react-icons/gi";
 import cls from "classnames";
@@ -13,34 +13,46 @@ import styles from "./SelectInput.module.css";
 type TransactionType = { name: string; value: string };
 
 interface Props {
-  displayText: string;
+  labelText: string;
   options: TransactionType[];
+  hasError?: boolean;
+  errorText?: string;
 }
 
 const SelectInput = (props: Props) => {
-  const { options, displayText } = props;
+  const { options, labelText, hasError = false, errorText = "" } = props;
   const maxStringLength = 28;
 
   const [showDropdown, setShowDropdown] = useState(false);
-  const [textDisplayed, setTextDisplayed] = useState(
-    shortenAndCapitalizeString(displayText, maxStringLength)
-  );
+  const [textDisplayed, setTextDisplayed] = useState("");
+  const isDirty = useRef(false);
 
   const getActiveClass = () => {
     return showDropdown ? styles.active : null;
   };
 
+  const getIsDirtyClass = () => {
+    return isDirty.current ? styles.isDirty : null;
+  };
+
   const onOptionClick = (value: string) => {
+    isDirty.current = true;
     setShowDropdown(false);
     setTextDisplayed(shortenAndCapitalizeString(value, maxStringLength));
+  };
+
+  const onSelectInputClick = () => {
+    setShowDropdown((prevShowDropdown) => !prevShowDropdown);
   };
 
   return (
     <div className={styles.container}>
       <div
-        className={cls(styles.selectInput, getActiveClass())}
-        onClick={() => setShowDropdown((prevShowDropdown) => !prevShowDropdown)}
+        className={cls(styles.selectInput, getActiveClass(), getIsDirtyClass())}
+        onClick={onSelectInputClick}
       >
+        <span className={styles.label}>{labelText}</span>
+
         <span className={styles.selectText}>{textDisplayed}</span>
 
         {showDropdown ? (
@@ -68,7 +80,7 @@ const SelectInput = (props: Props) => {
         )}
       </div>
 
-      {/* <span className={styles.error}>error text</span> */}
+      {hasError && <span className={styles.error}>{errorText}</span>}
     </div>
   );
 };
