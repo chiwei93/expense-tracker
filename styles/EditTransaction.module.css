@@ -1,0 +1,14 @@
+.heading {
+  font-size: var(--font-size-h4);
+  margin: 1.5em 0;
+}
+
+.formControl {
+  margin-bottom: 1.2em;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+}

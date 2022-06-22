@@ -1,13 +1,13 @@
 import type { NextPage } from "next";
 
-import BreadCrumbsList from "../components/Layouts/BreadCrumbsList/BreadCrumbsList";
+import BreadCrumbsList from "../../components/Layouts/BreadCrumbsList/BreadCrumbsList";
 
-import styles from "../styles/Transactions.module.css";
+import styles from "../../styles/Transactions.module.css";
 
 const Transactions: NextPage = () => {
   const breadcrumbs = [
     { name: "dashboard", href: "/dashboard" },
-    { name: "transactions", href: '/transactions' },
+    { name: "transactions", href: "/transactions" },
   ];
 
   return (
