@@ -33,75 +33,73 @@ const Signup: NextPage = () => {
   };
 
   return (
-    <div className={styles.formContainer}>
-      <Form handleOnSubmit={onFormSubmit}>
-        <p className={styles.logo}>ExpTrack</p>
+    <Form handleOnSubmit={onFormSubmit} style={{ margin: "4em 0" }}>
+      <p className={styles.logo}>ExpTrack</p>
 
-        <p className={styles.heading}>Get&apos;s started</p>
+      <p className={styles.heading}>Get&apos;s started</p>
 
-        <div className={cls(styles.formControl, styles.columns2)}>
-          <TextInput
-            id={`firstName-${firstNameInputId}`}
-            labelText="First Name"
-            errorText="Please provide a valid first name"
-          />
+      <div className={cls(styles.formControl, styles.columns2)}>
+        <TextInput
+          id={`firstName-${firstNameInputId}`}
+          labelText="First Name"
+          errorText="Please provide a valid first name"
+        />
 
-          <TextInput
-            id={`lastName-${lastNameInputId}`}
-            labelText="Last Name"
-            errorText="Please provide a valid last name"
-          />
-        </div>
+        <TextInput
+          id={`lastName-${lastNameInputId}`}
+          labelText="Last Name"
+          errorText="Please provide a valid last name"
+        />
+      </div>
 
-        <div className={styles.formControl}>
-          <TextInput
-            id={`email-${emailInputId}`}
-            labelText="Email"
-            errorText="Please provide a valid email"
-            inputType="email"
-          />
-        </div>
+      <div className={styles.formControl}>
+        <TextInput
+          id={`email-${emailInputId}`}
+          labelText="Email"
+          errorText="Please provide a valid email"
+          inputType="email"
+        />
+      </div>
 
-        <div className={styles.formControl}>
-          <PasswordInput
-            labelText="Password"
-            errorText="Please provide a valid password"
-            hasError={false}
-            id={`password-${passwordInputId}`}
-          />
-        </div>
+      <div className={styles.formControl}>
+        <PasswordInput
+          labelText="Password"
+          errorText="Please provide a valid password"
+          hasError={false}
+          id={`password-${passwordInputId}`}
+        />
+      </div>
 
-        <div className={styles.formControl}>
-          <PasswordInput
-            labelText="Confirm Password"
-            errorText="Passwords provided don't match"
-            hasError={false}
-            id={`confirmPassword-${confirmPasswordInputId}`}
-          />
-        </div>
+      <div className={styles.formControl}>
+        <PasswordInput
+          labelText="Confirm Password"
+          errorText="Passwords provided don't match"
+          hasError={false}
+          id={`confirmPassword-${confirmPasswordInputId}`}
+        />
+      </div>
 
-        <div className={styles.row}>
-          <Checkbox id={`agreeTermAndPrivacy-${agreeTermAndPrivacyInputId}`}>
-            <span>
-              I agree to ExpTrack&apos;s{" "}
-              <FormLink href="/terms-of-service">Terms of Service</FormLink> and{" "}
-              <FormLink href="/privacy-policy">Privacy Policy</FormLink>
-            </span>
-          </Checkbox>
-        </div>
-
-        <div className={styles.btnContainer}>
-          <FilledOutlineButton>Sign up</FilledOutlineButton>
-        </div>
-
-        <p className={styles.lastRow}>
-          Already have an account?{" "}
+      <div className={styles.row}>
+        <Checkbox id={`agreeTermAndPrivacy-${agreeTermAndPrivacyInputId}`}>
           <span>
-            <FormLink href="/">Log in</FormLink>
+            I agree to ExpTrack&apos;s{" "}
+            <FormLink href="/terms-of-service">Terms of Service</FormLink> and{" "}
+            <FormLink href="/privacy-policy">Privacy Policy</FormLink>
           </span>
-        </p>
-      </Form>
-    </div>
+        </Checkbox>
+      </div>
+
+      <div className={styles.btnContainer}>
+        <FilledOutlineButton>Sign up</FilledOutlineButton>
+      </div>
+
+      <p className={styles.lastRow}>
+        Already have an account?{" "}
+        <span>
+          <FormLink href="/">Log in</FormLink>
+        </span>
+      </p>
+    </Form>
   );
 };
 

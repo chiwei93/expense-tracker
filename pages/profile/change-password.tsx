@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 
 import { useId } from "react";
-import cls from "classnames";
 
 import FlexFullVerticalContainer from "../../components/Containers/FlexFullVerticalContainer/FlexFullVerticalContainer";
 import BreadCrumbsList from "../../components/Layouts/BreadCrumbsList/BreadCrumbsList";

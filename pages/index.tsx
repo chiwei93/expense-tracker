@@ -29,49 +29,47 @@ const Home: NextPage = () => {
   };
 
   return (
-    <div className={styles.formContainer}>
-      <Form handleOnSubmit={onFormSubmit}>
-        <p className={styles.logo}>ExpTrack</p>
+    <Form handleOnSubmit={onFormSubmit} style={{ margin: "4em 0" }}>
+      <p className={styles.logo}>ExpTrack</p>
 
-        <p className={styles.heading}>Welcome back</p>
+      <p className={styles.heading}>Welcome back</p>
 
-        <div className={styles.formControl}>
-          <TextInput
-            labelText="Email"
-            inputType="email"
-            errorText="Please provide a valid email"
-            hasError={false}
-            id={`email-${emailInputId}`}
-          />
-        </div>
+      <div className={styles.formControl}>
+        <TextInput
+          labelText="Email"
+          inputType="email"
+          errorText="Please provide a valid email"
+          hasError={false}
+          id={`email-${emailInputId}`}
+        />
+      </div>
 
-        <div className={styles.formControl}>
-          <PasswordInput
-            labelText="Password"
-            errorText="Please provide a valid password"
-            hasError={false}
-            id={`password-${passwordInputId}`}
-          />
-        </div>
+      <div className={styles.formControl}>
+        <PasswordInput
+          labelText="Password"
+          errorText="Please provide a valid password"
+          hasError={false}
+          id={`password-${passwordInputId}`}
+        />
+      </div>
 
-        <div className={styles.row}>
-          <Checkbox id={`rememberMe-${rememberMeId}`}>Remember me</Checkbox>
+      <div className={styles.row}>
+        <Checkbox id={`rememberMe-${rememberMeId}`}>Remember me</Checkbox>
 
-          <FormLink href="/forgot-password">Forgot your password?</FormLink>
-        </div>
+        <FormLink href="/forgot-password">Forgot your password?</FormLink>
+      </div>
 
-        <div className={styles.btnContainer}>
-          <FilledOutlineButton>Login</FilledOutlineButton>
-        </div>
+      <div className={styles.btnContainer}>
+        <FilledOutlineButton>Login</FilledOutlineButton>
+      </div>
 
-        <p className={styles.lastRow}>
-          Don&apos;t have an account yet?{" "}
-          <span>
-            <FormLink href="/signup">Sign Up</FormLink>
-          </span>
-        </p>
-      </Form>
-    </div>
+      <p className={styles.lastRow}>
+        Don&apos;t have an account yet?{" "}
+        <span>
+          <FormLink href="/signup">Sign Up</FormLink>
+        </span>
+      </p>
+    </Form>
   );
 };
 
