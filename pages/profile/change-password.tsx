@@ -33,14 +33,14 @@ const ChangePassword: NextPage = () => {
 
         <div className={styles.formControl}>
           <PasswordInput
-            labelText="First Name"
+            labelText="old password"
             id={`oldPassword-${oldPasswordInputId}`}
           />
         </div>
 
         <div className={styles.formControl}>
           <PasswordInput
-            labelText="Last Name"
+            labelText="new password"
             id={`newPassword-${newPasswordInputId}`}
           />
         </div>
