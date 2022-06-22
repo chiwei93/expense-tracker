@@ -1,0 +1,32 @@
+.heading {
+  font-size: var(--font-size-h4);
+  margin: 1.5em 0;
+}
+
+.formControl {
+  margin-bottom: 1.2em;
+}
+
+.formControl.divider {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2em;
+}
+
+.formControl.lastRow {
+  margin-bottom: 0.3em;
+}
+
+.btnContainer {
+  margin-top: 4em;
+  display: grid;
+  gap: 0.5em;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media only screen and (min-width: 550px) {
+  .formControl.divider {
+    flex-direction: row;
+    gap: 0.5em;
+  }
+}

@@ -64,7 +64,7 @@ const Sidebar = (props: Props) => {
         </li>
 
         <li className={cls(styles.iconBtnItem, styles.tabletBtnItem)}>
-          <SidebarLink href="/add-transaction">
+          <SidebarLink href="/transactions/add">
             <BiFolderPlus />
             <span className={styles.iconBtnLabel}>Add Transaction</span>
           </SidebarLink>
@@ -92,7 +92,7 @@ const Sidebar = (props: Props) => {
         </li>
 
         <li className={cls(styles.iconBtnItem, styles.mobileBtnItem)}>
-          <Link href="/add-transaction">
+          <Link href="/transactions/add">
             <a className={styles.plusBtn}>
               <BsPlusLg />
             </a>

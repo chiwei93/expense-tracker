@@ -3,15 +3,15 @@ import type { NextPage } from "next";
 import { useId } from "react";
 import cls from "classnames";
 
-import FlexFullVerticalContainer from "../components/Containers/FlexFullVerticalContainer/FlexFullVerticalContainer";
-import BreadCrumbsList from "../components/Layouts/BreadCrumbsList/BreadCrumbsList";
-import Form from "../components/UI/Form/Form";
-import TextInput from "../components/UI/Inputs/TextInput/TextInput";
-import SelectInput from "../components/UI/Inputs/SelectInput/SelectInput";
-import DatePicker from "../components/UI/Inputs/DatePicker/DatePicker";
-import FilledOutlineButton from "../components/UI/Buttons/FilledOutlineButton/FilledOutlineButton";
+import FlexFullVerticalContainer from "../../components/Containers/FlexFullVerticalContainer/FlexFullVerticalContainer";
+import BreadCrumbsList from "../../components/Layouts/BreadCrumbsList/BreadCrumbsList";
+import Form from "../../components/UI/Form/Form";
+import TextInput from "../../components/UI/Inputs/TextInput/TextInput";
+import SelectInput from "../../components/UI/Inputs/SelectInput/SelectInput";
+import DatePicker from "../../components/UI/Inputs/DatePicker/DatePicker";
+import FilledOutlineButton from "../../components/UI/Buttons/FilledOutlineButton/FilledOutlineButton";
 
-import styles from "../styles/AddTransaction.module.css";
+import styles from "../../styles/AddTransaction.module.css";
 
 const AddTransaction: NextPage = () => {
   const titleInputId = useId();
@@ -19,7 +19,8 @@ const AddTransaction: NextPage = () => {
 
   const breadcrumbs = [
     { name: "dashboard", href: "/dashboard" },
-    { name: "new transaction", href: "/add-transaction" },
+    { name: "transactions", href: "/transactions" },
+    { name: "new transaction", href: "/transactions/add" },
   ];
 
   const transactionType = [

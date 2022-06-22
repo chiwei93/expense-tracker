@@ -16,8 +16,13 @@ const UserProfileBtn = (props: Props) => {
 
   const [showDropdown, setShowDropdown] = useState(false);
 
+  const closeDropdown = () => {
+    setShowDropdown(false);
+  };
+
   const onLogoutBtnClick = () => {
     dispatch(logout());
+    closeDropdown();
     router.replace("/");
   };
 
@@ -35,7 +40,9 @@ const UserProfileBtn = (props: Props) => {
           <ul className={styles.optionsList}>
             <li>
               <Link href="/profile">
-                <a className={styles.option}>Your profile</a>
+                <a className={styles.option} onClick={() => closeDropdown()}>
+                  Your profile
+                </a>
               </Link>
             </li>
             <li>
