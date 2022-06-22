@@ -19,19 +19,13 @@
   margin-bottom: 1em;
 }
 
-.iconBtn,
 .row,
 .btnContainer {
   display: flex;
 }
 
-.iconBtn,
 .row {
   align-items: center;
-}
-
-.iconBtn {
-  justify-content: center;
 }
 
 .row {

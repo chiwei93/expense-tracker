@@ -6,20 +6,20 @@ import cls from "classnames";
 import FlexFullVerticalContainer from "../../components/Containers/FlexFullVerticalContainer/FlexFullVerticalContainer";
 import BreadCrumbsList from "../../components/Layouts/BreadCrumbsList/BreadCrumbsList";
 import Form from "../../components/UI/Form/Form";
-import TextInput from "../../components/UI/Inputs/TextInput/TextInput";
-import FormLink from "../../components/UI/Links/FormLink/FormLink";
 import FilledOutlineButton from "../../components/UI/Buttons/FilledOutlineButton/FilledOutlineButton";
+import PasswordInput from "../../components/UI/Inputs/PasswordInput/PasswordInput";
 
-import styles from "../../styles/Profile.module.css";
+import styles from "../../styles/ChangePassword.module.css";
 
-const Profile: NextPage = () => {
-  const firstNameInputId = useId();
-  const lastNameInputId = useId();
-  const emailInputId = useId();
+const ChangePassword: NextPage = () => {
+  const oldPasswordInputId = useId();
+  const newPasswordInputId = useId();
+  const confirmNewPasswordInputId = useId();
 
   const breadcrumbs = [
     { name: "dashboard", href: "/dashboard" },
     { name: "your profile", href: "/profile" },
+    { name: "change password", href: "/profile/change-password" },
   ];
 
   const onFormSubmit = () => {};
@@ -31,29 +31,29 @@ const Profile: NextPage = () => {
 
         <h1 className={styles.heading}>Your Profile</h1>
 
-        <div className={cls(styles.formControl, styles.divider)}>
-          <TextInput
+        <div className={styles.formControl}>
+          <PasswordInput
             labelText="First Name"
-            id={`firstName-${firstNameInputId}`}
-          />
-
-          <TextInput labelText="Last Name" id={`lastName-${lastNameInputId}`} />
-        </div>
-
-        <div className={cls(styles.formControl, styles.lastRow)}>
-          <TextInput
-            labelText="Email"
-            inputType="email"
-            id={`email-${emailInputId}`}
+            id={`oldPassword-${oldPasswordInputId}`}
           />
         </div>
 
-        <div>
-          <FormLink href="/profile/change-password">Change password</FormLink>
+        <div className={styles.formControl}>
+          <PasswordInput
+            labelText="Last Name"
+            id={`newPassword-${newPasswordInputId}`}
+          />
+        </div>
+
+        <div className={styles.formControl}>
+          <PasswordInput
+            labelText="confirm new password"
+            id={`confirmNewPassword-${confirmNewPasswordInputId}`}
+          />
         </div>
 
         <div className={styles.btnContainer}>
-          <FilledOutlineButton>Edit</FilledOutlineButton>
+          <FilledOutlineButton>Save</FilledOutlineButton>
 
           <FilledOutlineButton btnDesignType="outline" btnType="button">
             Cancel
@@ -64,4 +64,4 @@ const Profile: NextPage = () => {
   );
 };
 
-export default Profile;
+export default ChangePassword;

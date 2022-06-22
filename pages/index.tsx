@@ -1,12 +1,12 @@
 import type { NextPage } from "next";
 
 import { useRouter } from "next/router";
-import { useState, useId } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useId } from "react";
 
 import FilledOutlineButton from "../components/UI/Buttons/FilledOutlineButton/FilledOutlineButton";
 import Form from "../components/UI/Form/Form";
 import Checkbox from "../components/UI/Inputs/Checkbox/Checkbox";
+import PasswordInput from "../components/UI/Inputs/PasswordInput/PasswordInput";
 import TextInput from "../components/UI/Inputs/TextInput/TextInput";
 import FormLink from "../components/UI/Links/FormLink/FormLink";
 import { useAppDispatch } from "../store";
@@ -21,8 +21,6 @@ const Home: NextPage = () => {
   const emailInputId = useId();
   const passwordInputId = useId();
   const rememberMeId = useId();
-
-  const [showPassword, setShowPassword] = useState(false);
 
   const onFormSubmit = () => {
     // validate user input
@@ -48,24 +46,12 @@ const Home: NextPage = () => {
         </div>
 
         <div className={styles.formControl}>
-          <TextInput
+          <PasswordInput
             labelText="Password"
-            inputType={showPassword ? "text" : "password"}
             errorText="Please provide a valid password"
             hasError={false}
-            hasIcon={true}
             id={`password-${passwordInputId}`}
-          >
-            <button
-              onClick={() =>
-                setShowPassword((prevShowPassword) => !prevShowPassword)
-              }
-              type="button"
-              className={styles.iconBtn}
-            >
-              {showPassword ? <FaEye /> : <FaEyeSlash />}
-            </button>
-          </TextInput>
+          />
         </div>
 
         <div className={styles.row}>

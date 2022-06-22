@@ -1,8 +1,7 @@
 import type { NextPage } from "next";
 
 import { useRouter } from "next/router";
-import { useId, useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { useId } from "react";
 import cls from "classnames";
 
 import Form from "../components/UI/Form/Form";
@@ -10,6 +9,7 @@ import TextInput from "../components/UI/Inputs/TextInput/TextInput";
 import Checkbox from "../components/UI/Inputs/Checkbox/Checkbox";
 import FormLink from "../components/UI/Links/FormLink/FormLink";
 import FilledOutlineButton from "../components/UI/Buttons/FilledOutlineButton/FilledOutlineButton";
+import PasswordInput from "../components/UI/Inputs/PasswordInput/PasswordInput";
 
 import { useAppDispatch } from "../store";
 import { login } from "../store/reducers/authSlice";
@@ -25,9 +25,6 @@ const Signup: NextPage = () => {
   const passwordInputId = useId();
   const confirmPasswordInputId = useId();
   const agreeTermAndPrivacyInputId = useId();
-
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const onFormSubmit = () => {
     // validate user input
@@ -66,47 +63,21 @@ const Signup: NextPage = () => {
         </div>
 
         <div className={styles.formControl}>
-          <TextInput
+          <PasswordInput
             labelText="Password"
-            inputType={showPassword ? "text" : "password"}
             errorText="Please provide a valid password"
             hasError={false}
-            hasIcon={true}
             id={`password-${passwordInputId}`}
-          >
-            <button
-              onClick={() =>
-                setShowPassword((prevShowPassword) => !prevShowPassword)
-              }
-              type="button"
-              className={styles.iconBtn}
-            >
-              {showPassword ? <FaEye /> : <FaEyeSlash />}
-            </button>
-          </TextInput>
+          />
         </div>
 
         <div className={styles.formControl}>
-          <TextInput
+          <PasswordInput
             labelText="Confirm Password"
-            inputType={showConfirmPassword ? "text" : "password"}
             errorText="Passwords provided don't match"
             hasError={false}
-            hasIcon={true}
             id={`confirmPassword-${confirmPasswordInputId}`}
-          >
-            <button
-              onClick={() =>
-                setShowConfirmPassword(
-                  (prevShowConfirmPassword) => !prevShowConfirmPassword
-                )
-              }
-              type="button"
-              className={styles.iconBtn}
-            >
-              {showConfirmPassword ? <FaEye /> : <FaEyeSlash />}
-            </button>
-          </TextInput>
+          />
         </div>
 
         <div className={styles.row}>
