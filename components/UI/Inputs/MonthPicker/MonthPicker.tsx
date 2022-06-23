@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { BiChevronDownCircle } from "react-icons/bi";
-import cls from "classnames";
 
 import styles from "./MonthPicker.module.css";
 
