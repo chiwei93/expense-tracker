@@ -1,6 +1,7 @@
 import type { NextPage } from "next";
 
 import BreadCrumbsList from "../../components/Layouts/BreadCrumbsList/BreadCrumbsList";
+import MonthPicker from "../../components/UI/Inputs/MonthPicker/MonthPicker";
 
 import styles from "../../styles/Transactions.module.css";
 
@@ -13,6 +14,12 @@ const Transactions: NextPage = () => {
   return (
     <>
       <BreadCrumbsList breadcrumbs={breadcrumbs} />
+
+      <div className={styles.headContainer}>
+        <h1 className={styles.transactionHeading}>Transactions</h1>
+
+        <MonthPicker />
+      </div>
     </>
   );
 };

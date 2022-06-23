@@ -1,0 +1,13 @@
+.headContainer {
+  margin: 3em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5em;
+}
+
+.transactionHeading {
+  font-size: var(--font-size-h4);
+  color: var(--color-heading);
+  font-weight: var(--font-weight-semibold);
+}
