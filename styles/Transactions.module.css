@@ -11,3 +11,12 @@
   color: var(--color-heading);
   font-weight: var(--font-weight-semibold);
 }
+
+.categoryList,
+.categoryItem:not(:last-child) {
+  margin-bottom: 5em;
+}
+
+.transactionItem:not(:last-child) {
+  margin-bottom: 1em;
+}

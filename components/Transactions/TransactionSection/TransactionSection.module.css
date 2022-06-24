@@ -1,0 +1,19 @@
+.header {
+  font-size: var(--font-size-h6);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--color-input-border);
+  margin-bottom: 2em;
+}
+
+.category {
+  font-weight: var(--font-weight-medium);
+}
+
+.totalAmount {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+}

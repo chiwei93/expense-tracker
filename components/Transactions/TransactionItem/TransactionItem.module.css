@@ -1,0 +1,166 @@
+.container {
+  background-color: var(--color-form-bg);
+  padding: 1em;
+  border-radius: var(--border-radius-form);
+  display: grid;
+  grid-template-columns: 0.2fr 0.5fr 0.3fr;
+  gap: 1.1em;
+}
+
+.iconColumn {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  font-size: 1.8rem;
+  display: inline-block;
+  padding: 0.5em;
+  border-radius: 50%;
+}
+
+.circle.expense {
+  background-color: var(--color-icon-light-red);
+  color: var(--color-icon-dark-red);
+}
+
+.circle.income {
+  background-color: var(--color-icon-light-green);
+  color: var(--color-icon-dark-green);
+}
+
+.circle.unknown {
+  background-color: var(--color-icon-light-purple);
+  color: var(--color-icon-dark-purple);
+}
+
+.column {
+  display: grid;
+  gap: 1em;
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+}
+
+.column.tablet,
+.column.desktop {
+  display: none;
+}
+
+.mobileBtnColumn {
+  justify-self: end;
+}
+
+.title,
+.category {
+  text-transform: capitalize;
+}
+
+.title {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  font-size: 1.1em;
+}
+
+.btnMore {
+  position: relative;
+  justify-self: end;
+}
+
+.moreIcon {
+  font-size: 1.5rem;
+}
+
+.dropdown {
+  background-color: var(--color-form-bg);
+  box-shadow: 0 0.1em 0.5em var(--color-dropdown-shadow);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 0.5em;
+  border-radius: var(--border-radius-form);
+}
+
+.dropdownOption {
+  padding: 0.3em 1em;
+  border-radius: var(--border-radius-form);
+  text-transform: capitalize;
+  transition: background-color 0.3s;
+}
+
+.dropdownOption:hover {
+  background-color: var(--color-input-bg);
+}
+
+.dropdownOption:not(:last-of-type) {
+  margin-bottom: 0.5em;
+}
+
+.totalAmount {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+  font-size: 1.1em;
+}
+
+@media only screen and (min-width: 744px) {
+  .container {
+    grid-template-columns: 0.1fr repeat(3, 1fr) 0.1fr;
+    padding: 1em 1.5em;
+    font-size: var(--font-size-small-text);
+    gap: 2em;
+  }
+
+  .column.mobile {
+    display: none;
+  }
+
+  .column.tablet {
+    display: grid;
+  }
+
+  .column.btnContainer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    gap: 3em;
+  }
+
+  .label,
+  .value {
+    text-transform: capitalize;
+  }
+
+  .value {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .btn {
+    font-size: 1.3rem;
+  }
+
+  .btn.edit {
+    color: var(--color-icon-dark-green);
+  }
+
+  .btn.delete {
+    color: var(--color-icon-dark-red);
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    grid-template-columns: 0.1fr repeat(4, 1fr) 0.1fr;
+  }
+
+  .column.desktop {
+    display: grid;
+  }
+}
