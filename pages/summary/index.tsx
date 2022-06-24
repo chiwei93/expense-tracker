@@ -5,12 +5,12 @@ import TransactionItem from "../../components/Transactions/TransactionItem/Trans
 import TransactionSection from "../../components/Transactions/TransactionSection/TransactionSection";
 import MonthPicker from "../../components/UI/Inputs/MonthPicker/MonthPicker";
 
-import styles from '../../styles/Categories.module.css'
+import styles from '../../styles/Summary.module.css'
 
-const Categories: NextPage = () => {
+const Summary: NextPage = () => {
   const breadcrumbs = [
     { name: "dashboard", href: "/dashboard" },
-    { name: "categories", href: "/categories" },
+    { name: "summary", href: "/summary" },
   ];
 
   return (
@@ -18,7 +18,7 @@ const Categories: NextPage = () => {
       <BreadCrumbsList breadcrumbs={breadcrumbs} />
 
       <div className={styles.headContainer}>
-        <h1 className={styles.categoryHeading}>Categories</h1>
+        <h1 className={styles.summaryHeading}>Summary</h1>
 
         <MonthPicker />
       </div>
@@ -50,4 +50,4 @@ const Categories: NextPage = () => {
   )
 }
 
-export default Categories;
+export default Summary;
