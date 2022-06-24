@@ -2,19 +2,21 @@
   background-color: var(--color-form-bg);
   padding: 1em;
   border-radius: var(--border-radius-form);
-  display: grid;
   grid-template-columns: 0.2fr 0.5fr 0.3fr;
   gap: 1.1em;
 }
 
-.iconColumn {
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.container,
+.column {
+  display: grid;
 }
 
-.icon {
+.iconColumn {
+  align-self: center;
+}
+
+.icon,
+.iconColumn {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -43,7 +45,6 @@
 }
 
 .column {
-  display: grid;
   gap: 1em;
   grid-template-rows: repeat(2, 1fr);
   align-items: center;
